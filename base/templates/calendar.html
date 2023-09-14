@@ -1,0 +1,98 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+  
+    <link href='{% static "fullcalendar/packages/core/main.css" %}' rel='stylesheet' />
+    <link href='{% static "fullcalendar/packages/daygrid/main.css" %}' rel='stylesheet' />
+    
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href='{% static "css/bootstrap.min.css" %}'>
+    
+    <!-- Style -->
+    <link rel="stylesheet" href='{%static "css/style.css" %}''>
+
+    <title>Calendar #10</title>
+  </head>
+  <body>
+  
+
+  <div id='calendar-container'>
+    <div id='calendar'>fucked</div>
+  </div>
+    
+    
+
+    <script src='{% static "js/jquery-3.3.1.min.js "%}'></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{%static 'js/bootstrap.min.js' %}"></script>
+
+    <script src='{% static "fullcalendar/packages/core/main.js" %}'></script>
+    <script src='{% static "fullcalendar/packages/interaction/main.js" %}'></script>
+    <script src='{% static "fullcalendar/packages/daygrid/main.js" %}'></script>
+    <script src='{% static "fullcalendar/packages/timegrid/main.js" %}'></script>
+    <script src='{% static "fullcalendar/packages/list/main.js" %}'></script>
+
+    
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          var calendarEl = document.getElementById('calendar');
+          
+          var calendar = new FullCalendar.Calendar(calendarEl, {
+              plugins: [ 'interaction', 'dayGrid', 'timeGrid', 'list' ],
+              height: 'parent',
+              header: {
+                  left: 'prev,next today',
+                  center: 'title',
+                  right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+              },
+              defaultView: 'dayGridMonth',
+              defaultDate: '2020-02-12',
+              navLinks: true,
+              editable: true,
+              eventLimit: true,
+              events: [
+                  // Your initial events here
+                  // ...
+  
+                  // Dynamically add events from Django
+                  {% for i in lect %}
+                      {
+                          title: "{{ i.title }}",
+                          start: "{{ i.date_as_str }}",
+                          end:"{{i.get_end_date}}"
+                          // Additional event properties as needed
+                      },
+                  {% endfor %}
+              ]
+          });
+  
+          calendar.render();
+      });
+  </script>
+  
+
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+  <h1> {% for i in lect %}
+    {
+  
+   
+   title :{{i.title}},
+   start:{{i.date_as_str}},
+   end:{{i.get_end_date}}
+    },
+    {% endfor %}
+  hello</h1>
+</html>

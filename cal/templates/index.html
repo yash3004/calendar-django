@@ -1,0 +1,61 @@
+
+{% extends 'base1.html' %}
+
+{% block header %}
+
+{% endblock %}
+
+
+{% block content %}
+
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7 col-md-push-5">
+						<div class="booking-cta">
+							<h1>Make your reservation</h1>
+							<p>Tap to this to view the lecturees  : <a href = "/cal/calendar">calendar</a>
+							</p> 
+						</div>
+					</div>
+					<div class="col-md-4 col-md-pull-7">
+						<div class="booking-form">
+							<form action="" , method="post">
+								{% csrf_token %}
+								
+								<div class="form-group">
+									<span class="form-label">Enter Lecture</span>
+									<input class="form-control" type="text" placeholder="Enter Lecture Name" , name = "lecture" , id = "lecture">
+								</div>
+								<div class="form-group">
+									<span class="form-label">Enter Your Name</span>
+									<input class="form-control" type="text" placeholder="Enter Your Name Name" , name="student" , id = "student">
+								</div>
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="form-group">
+											<span class="form-label">Enter date</span>
+											<input class="form-control" type="date" required , name = "date" , id = "date">
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<span class="form-label">Enter Time</span>
+											<input class="form-control" type="time" required , name = "time" , id="time">
+										</div>
+									</div>
+								</div>
+								
+									
+								<div class="form-btn">
+									<button class="submit-btn">Book Lecture</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

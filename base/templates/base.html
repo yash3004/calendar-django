@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    {% load static %}
+
+
+    <head>
+        <meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/all.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/all.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/lightbox.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/flexslider.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/owl.theme.default.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/jquery.rateyo.css' %}"/>
+	<!-- <link rel="stylesheet" type="text/css" href="css/jquery.mmenu.all.css" /> -->
+	<!-- <link rel="stylesheet" type="text/css" href="css/meanmenu.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="{% static 'inner-page-style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700" rel="stylesheet">
+  
+    </head>
+    <body>
+        {% block content %}
+
+        {% endblock %}
+
+        <script type="text/javascript" src="{% static 'js/lightbox.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/all.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/owl.carousel.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/jquery.flexslider.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/jquery.rateyo.js' %}"></script>
+        <!-- <script type="text/javascript" {% static 'src="js/jquery.mmenu.all.js"></script> -->
+        <!-- <script type="text/javascript" {% static 'src="js/jquery.meanmenu.min.js"></script> -->
+        <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+{% extends 'base1.html' %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+<h1>welcome</h1>
+<div>
+    {% for i in users %}
+    <p>{{i.name}}</p>
+    {% endfor %}
+</div>
+<div>
+    {% for u in lect %}
+    <p>{{u.title}}</p>
+    {% endfor %}
+</div>
+
+<a href="">helo </a>
+
+{% endblock %}
