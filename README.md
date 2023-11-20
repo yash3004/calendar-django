@@ -1,6 +1,6 @@
 # Django Project
 
-This is a Django project for [describe the project briefly].
+This is a Django project for time-table management for lecture ,and viewing the task on the calendar, a simple task/lecture adding , removing,updating django app
 
 ## Installation
 
