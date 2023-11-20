@@ -1,10 +1,35 @@
-pip install django :- install django
+# Django Project
 
-python manage.py makemigrations :- for intialization of db
+This is a Django project for [describe the project briefly].
 
-python manage.py runserver :- for running the server locally
+## Installation
 
-![app_layout](img/1.png)
-![app_layout](img/2.png)
-![app_layout](img/3.png)
+1. Install Django using pip:
+    ```bash
+    pip install django
+    ```
+
+2. Clone the repository:
+    ```bash
+    git clone https://github.com/yash3004/calendar-django.git
+    ```
+
+## Initialization
+
+1. Make migrations to initialize the database schema:
+    ```bash
+    python manage.py makemigrations
+    ```
+
+2. Apply migrations to create database tables:
+    ```bash
+    python manage.py migrate
+    ```
+
+## Running the Server
+
+To run the Django server locally:
+
+```bash
+python manage.py runserver
 
